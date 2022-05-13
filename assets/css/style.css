@@ -21,6 +21,26 @@
     --fw-500: 500;
     --fw-600: 600;
     --fw-700: 700;
+    /**
+   * transition
+   */
+
+    --transition: 0.25s ease;
+    --transition-2: 0.5s ease;
+
+    /**
+   * spacing
+   */
+
+    --section-padding: 60px;
+
+    /**
+   * border radius
+   */
+
+    --radius-4: 4px;
+    --radius-8: 8px;
+    --radius-12: 12px;
 }
 
 
@@ -275,4 +295,55 @@ body {
 
 .hero .btn {
     margin-inline: auto;
+}
+
+
+/* Features */
+.features {
+    padding-block: var(--section-padding);
+}
+
+.features .section-title {
+    margin-bottom: 40px;
+}
+
+.features :is(.section-subtitle, .section-title) {
+    text-align: center;
+}
+
+.features-list {
+    display: grid;
+    gap: 25px;
+}
+
+.features-card {
+    border: 1px solid hsl(0, 0%, 90%);
+    padding: 30px;
+    text-align: center;
+}
+
+.features-card .card-icon {
+    max-width: max-content;
+    margin-inline: auto;
+    margin-bottom: 30px;
+}
+
+.features-card .card-title {
+    margin-bottom: 15px;
+}
+
+.features-card .card-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--red-crayola);
+    font-size: var(--fs-5);
+    font-weight: var(--fw-600);
+    transition: var(--transition);
+}
+
+.features-card .card-link:is(:hover, :focus) {
+    gap: 10px;
+    color: var(--space-cadet);
 }
