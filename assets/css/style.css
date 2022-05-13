@@ -81,7 +81,77 @@ body {
     padding-inline: 15px;
 }
 
+.w-100 {
+    width: 100%;
+}
 
+.h1,
+.h2,
+.h3 {
+    color: var(--space-cadet);
+    line-height: 1.2;
+}
+
+.h1 {
+    font-size: var(--fs-1);
+}
+
+.h2 {
+    font-size: var(--fs-2);
+}
+
+.h3 {
+    font-size: var(--fs-3);
+}
+
+.section-text,
+.features .card-text {
+    color: var(--black-coral);
+    font-size: var(--fs-4);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.btn {
+    font-size: var(--fs-4);
+    font-weight: var(--fw-500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 14px 25px;
+    border-radius: var(--radius-4);
+    transition: var(--transition);
+}
+
+.btn-primary {
+    color: var(--white);
+    background: var(--red-crayola);
+}
+
+.btn>ion-icon {
+    font-size: 16px;
+}
+
+.btn-primary:is(:hover, :focus) {
+    background: var(--blue-ryb);
+}
+
+.btn-secondary {
+    background: var(--blue-ryb);
+    color: var(--white);
+}
+
+.btn-secondary:is(:hover, :focus) {
+    background: var(--red-crayola);
+}
+
+.section-subtitle {
+    color: var(--black-coral);
+    font-size: var(--fs-5);
+    font-weight: var(--fw-600);
+    margin-bottom: 15px;
+}
 
 /* Header */
 .header {
@@ -177,4 +247,32 @@ body {
 
 .header .btn {
     display: none;
+}
+
+/* Hero */
+
+.hero {
+    background: var(--cultured);
+    padding-top: 130px;
+    padding-bottom: var(--section-padding);
+}
+
+.hero .shape {
+    display: none;
+}
+
+.hero-banner {
+    margin-bottom: 30px;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-title .hero .section-text {
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    margin-inline: auto;
 }
