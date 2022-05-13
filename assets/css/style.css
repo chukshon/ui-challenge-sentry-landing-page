@@ -22,3 +22,159 @@
     --fw-600: 600;
     --fw-700: 700;
 }
+
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+img,
+span,
+input,
+button,
+ion-icon {
+    display: block;
+}
+
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+}
+
+html {
+    font-family: var(--ff-be-vietnam-pro);
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--white);
+}
+
+
+/* Reused style  */
+.container {
+    padding-inline: 15px;
+}
+
+
+
+/* Header */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 74px;
+    background: var(--white);
+    box-shadow: 0 2px 25px hsla(0, 0%, 0%, 0.1);
+    padding-block: 16px;
+    overflow: hidden;
+    transition: 0.35s ease-out;
+    z-index: 4;
+}
+
+.header.nav-active {
+    height: 250px;
+    transition: 0.5s ease-out;
+}
+
+.header.active {
+    position: fixed;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 160px;
+}
+
+.nav-toggle-btn {
+    color: hsla(0, 0%, 0%, 0.8);
+    font-size: 35px;
+    padding-inline: 5px;
+}
+
+.nav-toggle-btn .open,
+.nav-toggle-btn.active .close {
+    display: block;
+}
+
+.nav-toggle-btn .close,
+.nav-toggle-btn.active .open {
+    display: none;
+}
+
+.navbar {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    padding-block: 10px;
+    visibility: hidden;
+}
+
+.header.nav-active .navbar {
+    visibility: visible;
+}
+
+.navbar-link {
+    color: var(--space-cadet);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-600);
+    padding: 6px 15px;
+    transition: var(--transition);
+    opacity: 0;
+}
+
+.header.nav-active .navbar-link {
+    opacity: 1;
+}
+
+.navbar-link:is(:hover, :focus) {
+    color: var(--red-crayola);
+}
+
+.header .btn {
+    display: none;
+}
