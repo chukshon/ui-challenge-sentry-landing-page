@@ -491,3 +491,31 @@ body {
 .blog-title>a:is(:hover, :focus) {
     color: var(--red-crayola);
 }
+
+
+/* Newsletter */
+.newsletter {
+    background: var(--cultured);
+    padding-block: var(--section-padding);
+}
+
+.newsletter-banner {
+    margin-bottom: 30px;
+}
+
+.newsletter .section-title {
+    margin-bottom: 25px;
+}
+
+.input-field {
+    background: var(--white);
+    outline: 1px solid hsla(0, 0%, 0%, 0.1);
+    padding: 15px 20px;
+    border-radius: var(--radius-4);
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.input-field:focus {
+    outline-color: var(--red-crayola);
+}
